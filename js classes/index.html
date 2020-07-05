@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Classes</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //==========================BASIC CLASS===========================//
+            // /*
+            //     Class -> Object
+
+            //     Instance Properties: what the have
+            //         -name
+            //         -age
+            //         -height
+
+            //     Instance Methods -> what they do
+            //         -talk
+            //         -jump
+            //         -run 
+            // */
+
+            // class Rectangle{
+            //     //Setup
+            //     constructor(_width, _height, _color){
+            //         console.log('The Rectangle is being created!')
+            //         this.width = _width;
+            //         this.height = _height;
+            //         this.color = _color;
+            //     }
+
+            //     getArea(){
+            //         return this.width * this.height;
+            //     }
+
+            //     printDescription(){
+            //         console.log(`I am a rectange of ${this.width} x ${this.height} and I am ${this.color}`)
+            //     }
+            // }
+
+            // let myRectangle1 = new Rectangle(3,5,'blue');
+            // let myRectangle2 = new Rectangle(6,7,'red');
+
+            // myRectangle1.printDescription()
+            // myRectangle2.printDescription() 
+
+        //========================JS CLASSES: GETTERS And SETTERS=============================//
+            class Square{
+                constructor(_width){
+                    this.width = _width;
+                    this.height = _width;
+                }
+
+                get area(){
+                    return this.width * this.height;
+                }
+
+                set area(area){
+                    this.width = Math.sqrt(area)
+                    this.height = this.width;
+                }
+            }
+
+            let square1 = new Square(4);
+            // console.log(square1.area); 
+            square1.area = 25;
+            console.log(square1.area); 
+            console.log(square1.width); 
+            console.log(square1.height); 
+
+
+    </script>
+</body>
+</html>
